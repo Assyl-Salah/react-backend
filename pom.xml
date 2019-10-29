@@ -57,6 +57,28 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.13.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -73,6 +95,7 @@
                     </resource>
                 </resources>
 	</build>
+
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -83,6 +106,13 @@
 				<spring.profiles.active>dev</spring.profiles.active>
 			</properties>
 		</profile>
+		<profile>
+			<id>it</id>
+			<properties>
+				<spring.profiles.active>it</spring.profiles.active>
+			</properties>
+		</profile>
+
 	</profiles>
 
 </project>
