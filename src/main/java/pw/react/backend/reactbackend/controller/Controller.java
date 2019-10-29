@@ -60,8 +60,8 @@ public class Controller {
     public ResponseEntity<Object> updateStudent(@RequestBody User user, @PathVariable long id) {
         Optional<User> users = urepos.findById(id);
         if (!((Optional) users).isPresent())
-            return ResponseEntity.notFound().build();
-
+            throw new ResourceNotFoundException("User", "id", id);
+          //  return ResponseEntity.notFound().build();
         user.setId(id);
         urepos.save(user);
         return ResponseEntity.noContent().build();
@@ -69,8 +69,9 @@ public class Controller {
 
     @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable long id)
-    {
+    {   if (urepos.findById(id).isPresent())
         urepos.deleteById(id);
-        throw new ResourceNotFoundException("user", "id", id);
+    else
+    throw new ResourceNotFoundException("User", "id", id);
     }
 }
