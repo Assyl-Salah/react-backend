@@ -43,7 +43,7 @@ public class Controller {
     public String retrieveLogin(@PathVariable String login) {
         User user = urepos.findByLogin(login);
         if (user == null)
-            return "No user was found";
+            throw new ResourceNotFoundException("User", "login", login);
         return user.toString();
     }
 
@@ -51,7 +51,7 @@ public class Controller {
     public String retrieveid(@PathVariable long id) {
         Optional<User> user = urepos.findById(id);
         if (!(user).isPresent())
-            return "No user was found";
+            throw new ResourceNotFoundException("User", "id", id);
         return user.toString();
     }
 
