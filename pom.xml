@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pw.react.backend</groupId>
 	<artifactId>react-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>react-backend</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -67,18 +67,18 @@
 			<artifactId>assertj-core</artifactId>
 			<version>3.13.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>RELEASE</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.5.2</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.junit.jupiter</groupId>-->
+<!--			<artifactId>junit-jupiter</artifactId>-->
+<!--			<version>RELEASE</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.junit.jupiter</groupId>-->
+<!--			<artifactId>junit-jupiter-api</artifactId>-->
+<!--			<version>5.5.2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -112,7 +112,6 @@
 				<spring.profiles.active>it</spring.profiles.active>
 			</properties>
 		</profile>
-
 	</profiles>
 
 </project>
