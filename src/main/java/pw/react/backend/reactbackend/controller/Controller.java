@@ -1,5 +1,8 @@
 package pw.react.backend.reactbackend.controller;
 
+import org.hibernate.engine.jdbc.StreamUtils;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +11,9 @@ import pw.react.backend.reactbackend.error.ResourceNotFoundException;
 import pw.react.backend.reactbackend.respository.UserRepository;
 import pw.react.backend.reactbackend.service.UserService;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,4 +79,6 @@ public class Controller {
     else
     throw new ResourceNotFoundException("User", "id", id);
     }
+
+
 }

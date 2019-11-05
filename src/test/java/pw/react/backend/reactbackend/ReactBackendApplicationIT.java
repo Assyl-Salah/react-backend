@@ -57,7 +57,4 @@ public class ReactBackendApplicationIT {
 
         this.mockMvc.perform(delete("/users/1")).andExpect(status().isNotFound());
     }
-
-
-
 }

@@ -4,6 +4,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Blob;
 import java.sql.Date;
 
 @Entity
@@ -24,7 +25,8 @@ public class User {
     private Date date_of_birth;
     @Column(name = "is_active")
     private Boolean is_active;
-
+  @Column(name ="photo")
+  private Blob  photo;
     public User(){}
 
     public User(String login, String first_name, String last_name,Date birth,Boolean is_active) {
