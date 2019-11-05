@@ -28,5 +28,4 @@ public class entrypoint extends BasicAuthenticationEntryPoint {
         setRealmName("DeveloperStack");
         super.afterPropertiesSet();
     }
-
 }
