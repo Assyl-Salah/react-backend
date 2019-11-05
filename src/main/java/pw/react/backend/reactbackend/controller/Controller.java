@@ -57,7 +57,7 @@ public class Controller {
 
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Object> updateStudent(@RequestBody User user, @PathVariable long id) {
+    public ResponseEntity<Object> updateUser(@RequestBody User user, @PathVariable long id) {
         Optional<User> users = urepos.findById(id);
         if (!((Optional) users).isPresent())
             throw new ResourceNotFoundException("User", "id", id);
